@@ -27,6 +27,8 @@ class Register extends React.Component {
     fetch('https://safe-peak-64857.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
+      'Access-Control-Allow-Origin':'*',
+      'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS',
       rejectUnauthorized: false,
       body: JSON.stringify({
         email: this.state.email,

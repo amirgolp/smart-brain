@@ -79,6 +79,8 @@ class App extends Component {
       fetch('https://safe-peak-64857.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS',
         body: JSON.stringify({
           input: this.state.input
         })
@@ -89,6 +91,8 @@ class App extends Component {
           fetch('https://safe-peak-64857.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
+            'Access-Control-Allow-Origin':'*',
+            'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS',
             body: JSON.stringify({
               id: this.state.user.id
             })

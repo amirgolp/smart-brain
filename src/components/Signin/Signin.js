@@ -21,6 +21,8 @@ class Signin extends React.Component {
     fetch('https://safe-peak-64857.herokuapp.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
+      'Access-Control-Allow-Origin':'*',
+      'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS',
       body: JSON.stringify({
         email: this.state.signInEmail,
         password: this.state.signInPassword
